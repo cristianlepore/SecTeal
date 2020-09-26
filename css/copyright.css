@@ -1,0 +1,14 @@
+.copyright {
+    font-size: 12px;
+    text-align: center;
+}
+
+.build_and_version {
+    text-align: center;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+span#datetime {
+    font-size: 10px;
+}

@@ -1,0 +1,521 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.layout {
+    margin-top: 15px;
+}
+
+.separator-odd.container {
+    margin: auto;
+    width: 86%;
+    position: relative;
+    font-family: monospace, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.separator-even.container {
+    margin: auto;
+    width: 86%;
+    position: relative;
+    font-family: monospace, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.separator-odd {
+    padding-top: 70px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.separator-even {
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+#picture {
+    margin: 20px;
+}
+
+.single-project {
+    width: 100%;
+    height: 260px;
+}
+
+.thirtyfive {
+    margin: 2%;
+    width: 31%;
+    float: left;
+}
+
+.fifty_left {
+    float: left;
+    margin: 2%;
+    width: 46%;
+}
+
+.fifty_left .logo {
+    text-align: center;
+    font-size: 110px;
+}
+
+.fifty_right .logo {
+    text-align: center;
+    font-size: 110px;
+}
+
+.fifty_right {
+    float: right;
+    margin: 2%;
+    width: 46%;
+}
+
+.fifty_right .projects_title {
+    text-align: left;
+    font-weight: bold;
+}
+
+.fifty_left .projects_title {
+    text-align: left;
+    font-weight: bold;
+}
+
+.fifty_right .projects_title a {
+    text-align: left;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    opacity: 0.9;
+}
+
+.fifty_left .projects_title a {
+    text-align: left;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    opacity: 0.9;
+}
+
+.fifty_right .projects_title a:hover {
+    text-align: left;
+    font-weight: bold;
+    color: grey;
+    opacity: 0.9;
+}
+
+.fifty_left .projects_title a:hover {
+    text-align: left;
+    font-weight: bold;
+    color: grey;
+    opacity: 0.9;
+}
+
+.fifty_right p {
+    font-size: 16px;
+}
+
+.fifty_left p {
+    font-size: 16px;
+}
+
+.sixtyfive {
+    margin: 2%;
+    width: 61%;
+    float: right;
+}
+
+#profile_picture {
+    width: 80%;
+    height: 80%;
+    max-width: 250px;
+    max-height: 250px;
+    min-width: 170px;
+    min-height: 170px;
+    text-align: center;
+}
+
+div#picture {
+    text-align: center;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+h2 {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#portrait-title h3 {
+    text-transform: capitalize;
+    opacity: 0.6;
+    text-align: center;
+}
+
+p#subtitle{
+    opacity: 0.6;
+}
+
+.fourty h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.sixty h3 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+div span {
+    opacity: 0.8;
+    text-align: center;
+    font-size: 18px;
+}
+
+#portrait-title a {
+    color: black;
+}
+
+#portrait-title #subtitle {
+    text-align: center;
+}
+
+#network-icons {
+    font-size: 28px;
+    margin: 12px;
+    text-align: center;
+}
+
+#network-icons a.icons:hover {
+    text-decoration: none;
+}
+
+.fourty {
+    width: 40%;
+    float: left;
+}
+
+.sixty {
+    width: 60%;
+    float: right;
+    padding-left: 4%;
+}
+
+.sixty ul.fa-ul {
+    margin-left: 4%;
+}
+
+.sixty ul.fa-ul i {
+    font-size: 22px;
+    float: left;
+}
+
+.sixty ul.fa-ul li {
+    margin-left: 37px;
+}
+
+.sixty ul li p.main_subject {
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.sixty ul li p.institution {
+    opacity: 0.7;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.fourty ul li a.certificate {
+    opacity: 0.9;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.moreDetails {
+    opacity: 0.7;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    width: 90%;
+    background-color: white;
+    float: right;
+    box-shadow: -1px 1px 3px grey;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 50px;
+    min-width: 250px;
+}
+
+.card:hover {
+    width: 90%;
+    background-color: white;
+    float: right;
+    box-shadow: -3px 3px 6px grey;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.job-title {
+    float: left;
+    opacity: 0.8;
+    font-weight: bold;
+}
+
+.job-company {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+}
+
+p.job-company a {
+    float: left;
+    font-size: 16px;
+    color: black;
+}
+
+.job-division p {
+    text-decoration: none;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    opacity: 0.9;
+}
+
+.job-division p a {
+    text-align: center;
+    opacity: 0.9;
+}
+
+.vertical_line_bottom {
+    transform: rotate(180deg);
+    height: 104px;
+    float: left;
+    border: 0.5px solid black;
+    margin-left: 10px;
+    margin-top: 31px;
+}
+
+.vertical_line_above {
+    transform: rotate(0deg);
+    height: 104px;
+    float: left;
+    border: 0.5px solid black;
+    margin-left: 9px;
+    margin-top: -124px;
+}
+
+.vertical_line_above2 {
+    transform: rotate(0deg);
+    height: 104px;
+    float: left;
+    border: 0.5px solid black;
+    margin-left: 10px;
+    margin-top: -124px;
+}
+
+.fullDot {
+    opacity: 0.8;
+    float: left;
+    height: 22px;
+    width: 22px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 54px;
+    margin-left: -100px;
+}
+
+.dot {
+    opacity: 0.8;
+    float: left;
+    height: 22px;
+    width: 22px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 54px;
+    margin-left: -100px;
+}
+
+.topright_corner {
+    float: right;
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+
+.topright_corner p {
+    text-align: right;
+}
+
+
+/************* Screen responsive *************/
+
+@media screen and (max-width: 1010px) {
+    .fourty ul li {
+        font-size: 13px;
+    }
+    .sixty ul li {
+        font-size: 13px;
+    }
+    .sixty ul li p.main_subject {
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    .sixty ul li p.institution {
+        opacity: 0.7;
+        font-size: 13px;
+    }
+    .fourty ul li a.certificate {
+        opacity: 0.9;
+        font-size: 13px;
+    }
+    .thirtyfive {
+        margin: 0%;
+    }
+    .sixtyfive {
+        margin: 0%;
+    }
+    .job-title {
+        font-size: 15px;
+    }
+    p.job-company a {
+        font-size: 14px;
+    }
+    .job-division p a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .thirtyfive {
+        width: 100%;
+        float: left;
+    }
+    .sixtyfive {
+        width: 100%;
+    }
+    div#picture {
+        text-align: center;
+    }
+    img#profile_picture {
+        width: 75%;
+        height: 75%;
+        max-width: 200px;
+        max-height: 200px;
+        min-width: 100px;
+        min-height: 145px;
+    }
+    .job-title {
+        font-size: 18px;
+    }
+    p.job-company a {
+        font-size: 16px;
+    }
+    .job-division p a {
+        font-size: 16px;
+    }
+    .fullDot {
+        opacity: 0.8;
+        float: left;
+        height: 22px;
+        width: 22px;
+        background-color: black;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 54px;
+        margin-left: -75px;
+    }
+    .dot {
+        opacity: 0.8;
+        float: left;
+        height: 22px;
+        width: 22px;
+        border: 1px solid black;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 54px;
+        margin-left: -75px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .fourty {
+        width: 100%;
+    }
+    .sixty {
+        width: 100%;
+        padding-left: 0%;
+    }
+    .fourty ul li {
+        font-size: 14px;
+    }
+    .sixty ul li {
+        font-size: 14px;
+    }
+    .sixty ul li p.main_subject {
+        margin-bottom: 0px;
+        font-size: 16px;
+    }
+    .sixty ul li p.institution {
+        opacity: 0.7;
+        font-size: 14px;
+    }
+    .fourty ul li a.certificate {
+        opacity: 0.9;
+        font-size: 14px;
+    }
+    .job-title {
+        font-size: 16px;
+    }
+    p.job-company a {
+        font-size: 14px;
+    }
+    .job-division p a {
+        font-size: 14px;
+    }
+    .fullDot {
+        display: none;
+    }
+    .dot {
+        display: none;
+    }
+    .card {
+        width: 100%;
+    }
+    .card:hover {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .fifty_left {
+        width: 96%;
+        margin: 2%;
+    }
+    .fifty_right {
+        width: 96%;
+        margin: 2%;
+    }
+    p.logo {
+        margin-bottom: -30px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .job-title {
+        width: 50%;
+    }
+}

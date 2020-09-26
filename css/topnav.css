@@ -1,0 +1,239 @@
+header {
+    background-color: white;
+    box-shadow: 5px 3px 5px grey;
+    padding-top: 13px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 13px;
+    font-family: monospace;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    margin-top: -15px;
+}
+
+.progress-container {
+    position: fixed;
+    width: 100%;
+    height: 4px;
+    margin-top: -14px;
+    background: white;
+}
+
+.progress-bar {
+    height: 4px;
+    background: grey;
+    width: 0%;
+}
+
+a {
+    background-color: white;
+    color: white;
+    text-decoration: none;
+}
+
+button.btn.btn-info {
+    background-color: white;
+    display: none;
+    float: right;
+    border: 1px solid lightgrey;
+    color: black;
+}
+
+a#name{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 23px;
+    text-align: center;
+}
+
+a#responsiveName {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+    display: none;
+}
+
+a#name:hover {
+    color: grey;
+    background-color: white;
+}
+
+button.btn.btn-info:hover {
+    color: black;
+    border: 1px;
+    border-color: lightgrey;
+    background-color: lightgrey;
+}
+
+a.item {
+    color: black;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+a.item:hover {
+    color: grey;
+    text-decoration: none;
+    border-bottom: 0px solid grey;
+}
+
+#topnav {
+    width: 86%;
+    margin: auto;
+    height: 34px;
+}
+
+.items {
+    margin-right: 39px;
+    text-align: center;
+    padding: 0px;
+}
+
+.thirty {
+    width: 30%;
+    float: left;
+}
+
+.seventy{
+    width: 70%;
+    float: right;
+}
+
+#menu.collapse.in {
+    display: none;
+}
+
+.item.active {
+    border-bottom: 0px solid grey;
+    text-decoration: none;
+    color: black;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    border: 0.5px solid lightgrey;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: grey;
+    color: black;
+}
+
+
+/************* Screen responsive *************/
+
+@media screen and (max-width: 1000px) {
+    .items {
+        display: none;
+    }
+    button.btn.btn-info {
+        display: block;
+    }
+    .thirty {
+        width: 70%;
+        float: left;
+    }
+    .collapse a.btn {
+        float: none;
+    }
+    .drop-down {
+        width: 86%;
+        margin: auto;
+        height: 34px;
+    }
+    a.btn {
+        width: 100%;
+        float: left;
+    }
+    a.item {
+        display: none;
+    }
+    .collapsing a {
+        width: 86%;
+        margin-left: 7%;
+        background-color: white;
+        padding-left: 0px;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+    .collapsing a p {
+        float: left;
+        margin: 0px;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+    }
+    .collapse.in a {
+        width: 86%;
+        margin-left: 7%;
+        background-color: white;
+        padding-left: 0px;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+    .collapse.in a p {
+        float: left;
+        margin: 0px;
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+    }
+    .collapse.in a p:hover {
+        float: left;
+        margin: 0px;
+        font-size: 18px;
+        font-weight: bold;
+        color: grey;
+    }
+    #menu.collapse.in {
+        display: block;
+    }
+    .collapse.in a:hover {
+        border-color: lightgrey
+    }
+}
+
+@media screen and (max-width: 460px) {
+    a#name {
+        font-size: 16px;
+    }
+    .thirty {
+        margin: 5px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    a#name {
+        font-size: 14px;
+    }
+    .thirty {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    a#name {
+        display: none;
+    }
+}
