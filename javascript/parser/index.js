@@ -1,3 +1,5 @@
+// This is the code to parse the string
+
 const { ConsoleErrorListener } = require('antlr4/error/ErrorListener');
 const { Token } = require('antlr4/index');
 const antlr4 = require('antlr4/index');
