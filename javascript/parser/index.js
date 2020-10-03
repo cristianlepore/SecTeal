@@ -13,6 +13,7 @@ var myList = [];
 var newList = [];
 var LIST = false;
 
+
 sectealFunctionListener = function (res) {
     this.Res = res;
     sectealListener.call(this); // inherit default listener
@@ -114,13 +115,14 @@ sectealFunctionListener.prototype.exitOp = function (ctx) {
 exports.sectealFunctionListener = sectealFunctionListener;
 
 //*** Program boot */
-
-// var input = fs.readFileSync('./parser/samples.txt').toString();
-var chars = new antlr4.InputStream("int a+int b");
-var lexer = new sectealLexer.sectealLexer(chars);
-var tokens = new antlr4.CommonTokenStream(lexer);
-var parser = new sectealParser.sectealParser(tokens);
-var tree = parser.prog();
-var res = [];
-var sectealClass = new sectealFunctionListener(res);
-antlr4.tree.ParseTreeWalker.DEFAULT.walk(sectealClass, tree);
+function parsing() {
+    // var input = fs.readFileSync('./parser/samples.txt').toString();
+    var chars = new antlr4.InputStream("int a+int b");
+    var lexer = new sectealLexer.sectealLexer(chars);
+    var tokens = new antlr4.CommonTokenStream(lexer);
+    var parser = new sectealParser.sectealParser(tokens);
+    var tree = parser.prog();
+    var res = [];
+    var sectealClass = new sectealFunctionListener(res);
+    antlr4.tree.ParseTreeWalker.DEFAULT.walk(sectealClass, tree);
+}
