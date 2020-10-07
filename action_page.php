@@ -12,7 +12,9 @@ fclose($file);
 
 // Use ls command to shell_exec 
 // function 
-$command = "javac -verbose prova.java 2>&1";
+$command = 'javac /java/My_run.java ';
+$result = passthru($command);
+$command = 'java /java/My_run';
 $result = passthru($command);
 
 // Display the list of all file 
