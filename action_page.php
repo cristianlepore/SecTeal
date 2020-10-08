@@ -19,8 +19,13 @@ $result = passthru($cmd);
 
 
 // Execute tha java parser with Antlr4
-exec('java -jar Parser.jar 2>&1', $result);
+// exec('java -jar Parser.jar 2>&1', $result);
 // Display the result on screen
-print_r($result);
+// print_r($result);
+
+
+// Execute the Python program
+$message = exec("python3 ./secteal.py 2>&1");
+echo "<div>".$message."</div>";
 
 ?>

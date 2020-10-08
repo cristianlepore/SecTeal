@@ -45,19 +45,19 @@
 
 .button {
     border: 1px solid white;
-    background-color: #4CAF50;
+    background-color: green;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
-  /* Green */
+/* Green */
 .success {
-    border-color: #4CAF50;
+    border-color: darkgreen;
     color: white;
 }
   
 .success:hover {
-    background-color: green;
+    background-color: darkgreen;
     color: white;
 }
