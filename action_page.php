@@ -10,15 +10,17 @@ fwrite($file, $contract);
 fclose($file);
 */
 
-// Use ls command to shell_exec 
-// function 
-$command = 'javac /java/My_run.java ';
-$result = passthru($command);
-$command = 'java /java/My_run';
-$result = passthru($command);
+$cmd = "export CLASSPATH='.:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH'";
+$result = passthru($cmd);
+$cmd = "alias antlr4='java -Xmx500M -cp '/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH' org.antlr.v4.Tool'";
+$result = passthru($cmd);
+$cmd = "alias grun='java -Xmx500M -cp '/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH' org.antlr.v4.gui.TestRig'";
+$result = passthru($cmd);
 
-// Display the list of all file 
-// and directory
-echo $result;
+
+// Execute tha java parser with Antlr4
+exec('java -jar Parser.jar 2>&1', $result);
+// Display the result on screen
+print_r($result);
 
 ?>
