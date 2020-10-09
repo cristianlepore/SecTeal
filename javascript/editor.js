@@ -110,3 +110,8 @@ function FindCurrentTags() {
     else
         document.querySelector("#list-button").classList.remove("highight-menu");
 }
+
+// GO back button
+function goBack() {
+    window.history.back();
+}
