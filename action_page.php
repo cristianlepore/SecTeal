@@ -104,7 +104,7 @@ fclose($file);
 
 // Check if file secteal-string-java.txt already exists in memory.
 // If file exists, delete the file.
-$filename = '/var/www/html/secteal-string-java.txt';
+$filename = '/home/cle/www/secteal/secteal-string-java.txt';
 if (file_exists($filename)) {
     unlink($filename);
 }
