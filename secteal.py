@@ -147,9 +147,11 @@ def roll_out(myList):
 # Char to substitute
 apostrophe = "'"
 # Read from file
-file = open("/home/cle/www/secteal/secteal-string-java.txt", "r")
+file = open("/var/www/html/secteal-string-java.txt", "r")
 myString = file.read()
-myString = "[['tx', '0', 'type'], '=', ['int', 'close']]"
+# myString = "[ 'tx', '0', 'type']"
+myString = myString.replace("[ ", "[")
+myString = myString.replace(",'", ", '")
 # Delete " ' " from the string -- This will help to process the string
 myString = myString.replace(apostrophe, "")
 # Return a list of all my substrings
