@@ -147,7 +147,7 @@ def roll_out(myList):
 # Char to substitute
 apostrophe = "'"
 # Read from file
-file = open("/var/www/html/secteal-string-java.txt", "r")
+file = open("/home/cle/www/secteal/secteal-string-java.txt", "r")
 myString = file.read()
 myString = "[['tx', '0', 'type'], '=', ['int', 'close']]"
 # Delete " ' " from the string -- This will help to process the string
@@ -156,7 +156,6 @@ myString = myString.replace(apostrophe, "")
 myList = getList(myString)
 
 fromParserORACLE = roll_out(myList)
-a = 0
 
 # >>> Cristian, la lista sopra e' quello che dovrebbe ricevere in input.
 
