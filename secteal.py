@@ -147,7 +147,7 @@ def roll_out(myList):
 # Char to substitute
 apostrophe = "'"
 # Read from file
-file = open("/home/cle/www/secteal/secteal-string-java.txt", "r")
+file = open("./secteal-string-java.txt", "r")
 myString = file.read()
 # myString = "[ 'tx', '0', 'type']"
 myString = myString.replace("[ ", "[")
