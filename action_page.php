@@ -99,11 +99,13 @@ $file = fopen("secteal-string.txt", "w") or die("Unable to open file!");
 fwrite($file, $contract);
 fclose($file);
 
+/*
 // Check if file secteal-string-java.txt already exists in memory.
 // If file exists, delete the file.
 // Create the file
 $file = fopen("secteal-string-java.txt", "w") or die("Unable to open file!");
 fclose($file);
+*/
 
 // Execute tha java parser with Antlr4
 exec('java -jar Parser.jar 2>&1', $result);
