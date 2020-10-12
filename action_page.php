@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Secteal</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,6 +20,7 @@
     <script type="text/javascript" src="javascript/evaluator.js"></script>
     <script type="text/javascript" src="javascript/jquery-linedtextarea.js"></script>
     <script type="text/javascript" src="javascript/parser/index.js"></script>
+
 </head>
 
 <body class="main">
@@ -58,15 +59,76 @@
 
 <div class="layout">
         <div id="editor" class="separator-odd">
-            <div class="container">
+            <div class="container" style="background-color: rgb(236, 236, 236);">
                 <div class="thirtyfive" id="profile">
                     <div id="portrait-title">
-                        <h2>Online Editor</h2>
-                        <h3><a href="https://www.algorand.com/" target="_blank" title="Algorand Blockchain">
-                                <span>Algorand Abstract Language</span>
-                            </a>
-                        </h3>
+                        <p style="font-size: 12px;">
+                            <b>SecTeal (Secure Teal)</b> is the programming
+                            language for <a href="https://www.algorand.com/" target="_blank">Algorand</a> stateless <a
+                                href="https://developer.algorand.org/docs/features/asc1/stateless/"
+                                target="_blank">smart
+                                contracts</a>
+                            (stateless ASC1) derived from the formal model of Algorand. The model abstracts
+                            stateless
+                            smart contracts by
+                            means of a <i>language of expressions</i> that evaluate to true or false.</p>
+                        <p style="font-size: 12px;">
+                            Such an interpretation enables a natural interpretation of the semantics of a smart contract
+                            in Algorand, whose evaluation reverts to true or false, consequently authorising or refusing
+                            a transaction in the Algorand blockchain. Such abstract approach lends itself to both
+                            express contracts' intended behaviour in a
+                            simple, logical way, and support formal verification of contracts' properties.
+                        </p>
+                        <p style="font-size: 12px;">
+                            This page provides a compiler from SecTeal to Teal, the native, layer-one, smart contract
+                            language of Algorand.
+                            This is part of an ongoing research effort aiming to develop general formal verification of
+                            smart contracts, with Algorand as a case study.
+                        </p>
                     </div>
+                    <p class="bottom-three"></p>
+                    <div>
+                        <div id="portrait-title">
+                            <p style="font-size: 12px;">
+                                <b>SecTeal language (grammar)</b> This is an experimental prototype that works on strict
+                                syntactic rules dictating how you need to write your smart contracts. The following
+                                grammar defines the expression accepted by the compiler (spaces must be respected):
+                            </p>
+                            <i style="font-size: 11px;">exp ::= val &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                a value
+                                <br>
+                                &emsp; | (exp ◦ exp) &nbsp;&emsp;&emsp;&emsp; ◦∈{+,−,<,≤,=,≥,>,∗,/,%,and,or}
+                                    <br>
+                                    &emsp; | not (exp) &emsp;&emsp;&emsp;&emsp; negation<br>
+                                    &emsp; | txlen &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp; number of
+                                    transactions in the atomic group <br>
+                                    &emsp; | txpos &emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp; index of
+                                    current transaction in the
+                                    atomic group <br>
+                                    &emsp; | txid(int) &emsp;&nbsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; identifier ofn-th
+                                    transaction
+                                    in the
+                                    atomic group <br>
+                                    &emsp; | tx(int).field &emsp;&emsp;&nbsp;&emsp; value of n-th tx's
+                                    field <br>
+                                    &emsp; | arglen &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp; number of arguments
+                                    of
+                                    the
+                                    current transaction <br>
+                                    &emsp; | arg(int) &nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&nbsp; n-th argument of the
+                                    current
+                                    transaction <br>
+                                    &emsp; | H(exp) &emsp;&emsp;&emsp;&emsp;&emsp; Hash <br>
+                                    &emsp; | versig(exp1, exp2, exp3) &emsp;&nbsp;&emsp;&nbsp;&nbsp; signature
+                                    verification
+                                    <br><br>
+                                    val :: = byte base64 BYTE <br>
+                                    &emsp; | int BYTE <br>
+                                    &emsp; | addr BYTE <br>
+                            </i>
+                        </div>
+                    </div>
+                    <!--
                     <div id="network-icons">
                         <a class="icons" href="" title="Contact us">
                             <i class="fa fa-envelope"></i>
@@ -78,14 +140,19 @@
                             <i class="fa fa-book"></i>
                         </a>
                     </div>
+                    -->
                 </div>
-
                 <div class="sixtyfive">
                     <p id="subtitle">
-                        RESULT (TEAL LANGUAGE)
+                        <h4>Result in pyTeal</h4>
                     </p>
-                    <div class="center"><div>
-                    <div id="box">
+                    <p style="font-size: 12px;">
+                        Insert your contract as an expression from the grammar exp on a single line, respecting space
+                        rules (see examples) and press Compile. You will get the Teal (executable) code corresponding to
+                        your SecTeal contract (USE AT YOUR OWN RISK! still an under dev prototype).
+                    </p>
+                    <div class="center">
+                        <div id="box" style="background-color: white;">
 
 <?php 
 
@@ -119,6 +186,7 @@ echo "<div>".$message."</div>";
 
 ?>
 
+    </div>
 </div>
                             <br>
                         <button class="button success" onclick="goBack()">Go Back</button>

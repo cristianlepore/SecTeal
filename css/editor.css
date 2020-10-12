@@ -44,6 +44,7 @@
 }
 
 .button {
+    margin-top: 7px;
     border: 1px solid white;
     background-color: green;
     padding: 10px 20px;
