@@ -1,1 +1,1 @@
-int close
+(tx(0).type = int close)
