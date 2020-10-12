@@ -91,9 +91,6 @@
 
 $contract = $_GET["contract"];
 $contract = trim($contract);
-$firstChar = substr($contract, 0, 1);
-if($firstChar != "(")
-    $contract = "(".$contract.")";
 
 // $contract = str_replace(' ', '', $contract);
 
