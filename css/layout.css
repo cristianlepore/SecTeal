@@ -522,4 +522,8 @@ p.job-company a {
 
 .bottom-three {
     margin-bottom: 1.5cm;
- }
+}
+
+.small_conainer {
+    margin: 20px;
+}

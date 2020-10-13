@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Secteal</title>
+    <title>SecTeal</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/topnav.css">
@@ -31,31 +31,32 @@
                 <a href="index.html" id="name"><i class="fa fa-code" aria-hidden="true"></i> Secteal </a>
                 <a href="index.html" id="responsiveName">&#10095;_</a>
             </div>
+            <!--
             <div class="items" id="myTopnav">
                 <a href="#editor" class="item">Editor</a>
-                <!--
                 <a href="#evaluation" class="item">Evaluation</a>
-                -->
+
                 <a href="#aboutUs" class="item">About us</a>
             </div>
             <button class="btn btn-info" data-toggle="collapse" data-target="#menu" aria-expanded="false"
                 aria-controls="home experience projects contact">
                 <i class="fa fa-bars"></i>
             </button>
+            -->
         </div>
+        <!--
         <div class="collapse" id="menu">
             <a href="#editor" class="btn" id="home">
                 <p>Editor</p>
             </a>
-            <!--
             <a href="#evaluation" class="btn">
                 <p>Evaluation</p>
             </a>
-            -->
             <a href="#aboutUs" class="btn">
                 <p>About us</p>
             </a>
         </div>
+        -->
     </header>
 
     <div class="layout">
@@ -145,23 +146,37 @@
                 </div>
 
                 <div class="sixtyfive">
-                    <p id="subtitle">
-                    <h4>How To Write</h4>
-                    </p>
-                    <p style="font-size: 12px;">
-                        Insert your contract as an expression from the grammar exp on a single line, respecting space
-                        rules (see examples) and press Compile. You will get the Teal (executable) code corresponding to
-                        your SecTeal contract
-                    </p>
-                    <p>USE AT YOUR OWN RISK! still an under dev prototype.
-                    </p>
-                    <div class="center">
-                        <form action="action_page.php" method="get">
-                            <textarea type="text" name="contract" rows="1px" cols="80%">
-                            </textarea>
-                            <br>
-                            <input class="button success" type="submit" value="Compile">
-                        </form>
+                    <div class="small_container">
+                        <p id="subtitle">
+                        <h4>How To Write</h4>
+                        </p>
+                        <p style="font-size: 12px;">
+                            Insert your contract as an expression from the grammar exp on a single line, respecting
+                            space
+                            rules (see examples) and press Compile. You will get the Teal (executable) code
+                            corresponding to
+                            your SecTeal contract
+                        </p>
+                        <p>USE AT YOUR OWN RISK! still an under dev prototype.
+                        </p>
+                        <div class="center">
+                            <form action="action_page.php" method="get">
+                                <input type="text" name="contract" size="">
+                                </input>
+                                <br>
+                                <input class="button success" type="submit" value="Compile">
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <p id="subtitle">
+                        <h4>Select an Example</h4>
+                        </p>
+                        <select name="cars" id="cars">
+                            <option value="volvo">Oracle</option>
+                            <option value="saab">HTLC</option>
+                            <option value="opel">etc..</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -188,6 +203,7 @@
         </div>
         -->
 
+        <!--
         <div id="aboutUs" class="separator-even">
             <div class="container">
                 <div>
@@ -207,6 +223,7 @@
                 </div>
             </div>
         </div>
+        -->
     </div>
 
     <!-- The following scripts are required to enable features -->

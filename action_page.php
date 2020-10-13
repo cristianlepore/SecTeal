@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Secteal</title>
+    <title>SecTeal</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/topnav.css">
@@ -30,31 +30,31 @@
                 <a href="index.html" id="name"><i class="fa fa-code" aria-hidden="true"></i> Secteal </a>
                 <a href="index.html" id="responsiveName">&#10095;_</a>
             </div>
+            <!--
             <div class="items" id="myTopnav">
                 <a href="index.html" class="item">Editor</a>
-                <!--
                 <a href="#evaluation" class="item">Evaluation</a>
-                -->
                 <a href="#aboutUs" class="item">About us</a>
             </div>
             <button class="btn btn-info" data-toggle="collapse" data-target="#menu" aria-expanded="false"
                 aria-controls="home experience projects contact">
                 <i class="fa fa-bars"></i>
             </button>
+            -->
         </div>
+        <!--
         <div class="collapse" id="menu">
             <a href="#editor" class="btn" id="home">
                 <p>Editor</p>
             </a>
-            <!--
             <a href="#evaluation" class="btn">
                 <p>Evaluation</p>
             </a>
-            -->
             <a href="#aboutUs" class="btn">
                 <p>About us</p>
             </a>
         </div>
+        -->
     </header>
 
 <div class="layout">
@@ -193,7 +193,8 @@ echo "<div>".$message."</div>";
             </div>
         </div>
 
-
+        
+        <!--
         <div id="aboutUs" class="separator-even">
             <div class="container">
                 <div>
@@ -213,6 +214,7 @@ echo "<div>".$message."</div>";
                 </div>
             </div>
         </div>
+        -->
     </div>
 </body>
 </html>
