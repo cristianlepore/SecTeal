@@ -147,9 +147,7 @@
                         <h4>Result in pyTeal</h4>
                     </p>
                     <p style="font-size: 12px;">
-                        Insert your contract as an expression from the grammar exp on a single line, respecting space
-                        rules (see examples) and press Compile. You will get the Teal (executable) code corresponding to
-                        your SecTeal contract (USE AT YOUR OWN RISK! still an under dev prototype).
+                        This is the Teal (executable) code corresponding to your SecTeal contract.
                     </p>
                     <div class="center">
                         <div id="box" style="background-color: white;">
