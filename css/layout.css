@@ -128,6 +128,12 @@ html {
     float: right;
 }
 
+.sixtyfive_text {
+    margin: 2%;
+    width: 61%;
+    float: right;
+}
+
 #profile_picture {
     width: 80%;
     height: 80%;
@@ -387,6 +393,9 @@ p.job-company a {
     .sixtyfive {
         margin: 0%;
     }
+    .sixtyfive_text {
+        margin: 0%;
+    }
     .job-title {
         font-size: 15px;
     }
@@ -405,6 +414,9 @@ p.job-company a {
     }
     .sixtyfive {
         width: 100%;
+    }
+    .sixtyfive_text {
+        font-size: 0px;
     }
     div#picture {
         text-align: center;
@@ -520,8 +532,12 @@ p.job-company a {
     }
 }
 
-.bottom-three {
-    margin-bottom: 1.5cm;
+.vertical_space-threeAndHalf {
+    margin-bottom: 3.5cm;
+}
+
+.vertical_space-one {
+    margin-bottom: 1cm;
 }
 
 .small_conainer {
