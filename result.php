@@ -177,6 +177,17 @@ $contract = trim($contract);
 
 // $contract = str_replace(' ', '', $contract);
 
+// Check if contract start withouth parenthesis. Add a parenthesis in the beginning and at the end of the formula
+/*
+if(substr($contract, 0, 3) != "int")
+    if($contract[0] != '(')
+        $contract = "(".$contract.")";
+
+if($contract[0] == '(')
+    if(substr($contract, 1, 3) == "int")
+        $contract = substr($contract, 1, -1);
+*/
+
 // Create the file
 $file = fopen("secteal-string.txt", "w") or die("Unable to open file!");
 fwrite($file, $contract);

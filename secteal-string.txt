@@ -1,0 +1,1 @@
+((tx(0).type = int close) and ((tx(0).fv > int 3000) and (tx(0).crcv = addr A)))
