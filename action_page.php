@@ -208,8 +208,7 @@ echo "<div>".$message."</div>";
                         </div>
                         <div class="build_and_version">
                             <p>
-                                Version: 0.3 (Beta) <br>
-                                Built at: <span id="datetime"></span>
+                                Version: 0.4 (Beta) <br>
                             </p>
                         </div>
                     </div>
