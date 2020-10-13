@@ -27,7 +27,7 @@
 <header>
         <div id="topnav">
             <div class="thirty">
-                <a href="index.html" id="name"><i class="fa fa-code" aria-hidden="true"></i> Secteal </a>
+                <a href="index.html" id="name"><i class="fa fa-code" aria-hidden="true"></i> SecTeal </a>
                 <a href="index.html" id="responsiveName">&#10095;_</a>
             </div>
             <!--
