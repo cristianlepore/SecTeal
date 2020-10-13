@@ -69,3 +69,9 @@
     border: 1px solid #cccccc;
     margin: 0;
 }
+
+#editor {
+    display: block;
+    margin: 0px;
+    width: 100%;
+  }
