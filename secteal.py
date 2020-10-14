@@ -125,7 +125,7 @@ def getList(myString):
     [start, end] = getSubstring(myString)
     while start != 0:
         subString = myString[start-1:end+1]
-        myString = myString.replace(subString, "list_"+str(i))
+        myString = myString.replace(subString, "list_"+str(i), 1)
         subString = subString.strip('[]')
         myList.append(convertToList(subString))
         i += 1
@@ -139,9 +139,9 @@ def roll_out(myList):
     while index < len(myList):
         for n, i in enumerate(myList[index]):
             if i[0:5] == "list_":
-                myList[index][n] = myList[int(i[5])]
+                myList[index][n] = myList[int(i[5:])]
         index += 1
-    return myList[-1]
+    return myList[len(myList)-1]
 
 
 # Char to substitute
@@ -158,7 +158,7 @@ myString = myString.replace(apostrophe, "")
 myList = getList(myString)
 
 fromParserORACLE = roll_out(myList)
-
+a = 0
 # >>> Cristian, la lista sopra e' quello che dovrebbe ricevere in input.
 
 # ------------------------------------------------------------
