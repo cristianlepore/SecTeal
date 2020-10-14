@@ -228,7 +228,7 @@ echo "<div>".$message."</div>";
             <div id="aboutUs" class="separator-even">
                 <div class="container">
                     <p style="font-size: 12px;">
-                        footnote:: to be published soon.
+                        Footnote available soon.
                     </p>
                 </div>
             </div>
