@@ -149,7 +149,7 @@ apostrophe = "'"
 # Read from file
 file = open("/var/www/html/secteal-string-java.txt", "r")
 myString = file.read()
-# myString = "[ 'tx', '0', 'type']"
+# myString = "[['int', 'open'], '=', ['int', 'close']]"
 myString = myString.replace("[ ", "[")
 myString = myString.replace(",'", ", '")
 # Delete " ' " from the string -- This will help to process the string
