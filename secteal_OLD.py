@@ -149,9 +149,8 @@ apostrophe = "'"
 # Read from file
 file = open("/var/www/html/secteal-string-java.txt", "r")
 myString = file.read()
-# myString = "[ 'txlen' ]"
+myString = "['txlen']"
 myString = myString.replace("[ ", "[")
-myString = myString.replace(" ]", "]")
 myString = myString.replace(",'", ", '")
 # Delete " ' " from the string -- This will help to process the string
 myString = myString.replace(apostrophe, "")

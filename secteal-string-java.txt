@@ -1,1 +1,1 @@
-[[[[ 'tx', '0', 'fv'], '>', ['int', '3000']], 'and', [[ 'tx', '0', 'crcv'], '=', ['addr', 'a']]], 'or', [[[[ 'arg', '0'], '=', ['byte base64', '0']], 'and', [[ 'verisig', [ 'arg', '0'], [ 'arg', '1'], ['addr', 'o']], 'and', [[ 'tx', '0', 'crcv'], '=', ['addr', 'a']]]], 'or', [[[ 'arg', '0'], '=', ['byte base64', '1']], 'and', [[ 'verisig', [ 'arg', '0'], [ 'arg', '1'], ['addr', 'o']], 'and', [[ 'tx', '0', 'crcv'], '=', ['addr', 'b']]]]]]
+[[ 'tx', '0', 'rcv'], '=', ['addr', 'zzaf5ara4mec5pvdop64jm5o5mqst63q2koy2flyflxxd3pfsnjjbyafzm']]

@@ -175,6 +175,9 @@
 $contract = $_GET["contract"];
 $contract = trim($contract);
 
+// change everything in lowercase letters.
+$contract = strtolower($contract);
+
 // $contract = str_replace(' ', '', $contract);
 
 // Check if contract start withouth parenthesis. Add a parenthesis in the beginning and at the end of the formula

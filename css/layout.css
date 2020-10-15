@@ -163,7 +163,7 @@ h2 {
     text-align: center;
 }
 
-p#subtitle{
+p#subtitle {
     opacity: 0.6;
 }
 
@@ -365,7 +365,6 @@ p.job-company a {
     text-align: right;
 }
 
-
 /************* Screen responsive *************/
 
 @media screen and (max-width: 1010px) {
@@ -538,6 +537,10 @@ p.job-company a {
 
 .vertical_space-one {
     margin-bottom: 1cm;
+}
+
+.vertical_space-half {
+    margin-bottom: 0.5cm;
 }
 
 .small_conainer {

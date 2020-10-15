@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/evaluator.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-linedtextarea.css">
+    <link rel="stylesheet" href="css/toggle.css">
 
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
@@ -20,6 +21,7 @@
     <script type="text/javascript" src="javascript/evaluator.js"></script>
     <script type="text/javascript" src="javascript/jquery-linedtextarea.js"></script>
     <script type="text/javascript" src="javascript/parser/index.js"></script>
+    <script type="text/javascript" src="javascript/drop-down-menu.js"></script>
 
 </head>
 
@@ -178,7 +180,8 @@
                         </p>
                         <div class="center">
                             <form action="result.php" method="get">
-                                <input id="editor" type="text" name="contract">
+                                <input id="editor" type="text" name="contract"
+                                    value="(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)">
                                 </input>
                                 <input class="button success" type="submit" value="Compile">
                             </form>
@@ -189,13 +192,21 @@
                         <p class="vertical_space-threeAndHalf"></p>
 
                         <p id="subtitle">
-                        <h4>Select an Example</h4>
+                        <h4>
+                            Select an Example
+                        </h4>
                         </p>
-                        <select name="cars" id="cars">
-                            <option value="volvo">Oracle</option>
-                            <option value="saab">HTLC</option>
-                            <option value="opel">etc..</option>
+                        <select id="mySelection" onchange="dropDownMenu()">
+                            <option value="Example1">Sample example</option>
+                            <option value="Oracle">Oracle</option>
+                            <option value="htlc">HTLC</option>
+                            <option value="Other">Other</option>
                         </select>
+
+                        <p class="vertical_space-half"></p>
+                        <div style="font-size: 12px;">
+                            <p id="description"></p>
+                        </div>
                     </div>
                 </div>
             </div>
