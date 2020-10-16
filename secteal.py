@@ -98,6 +98,16 @@ fromParserORACLE = [[['tx', '0', 'type'], '=', ['int', 'close']], 'and', [[[['tx
     'arg', '1'], ['addr', 'O']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'A']]]], 'or', [[['arg', '0'], '=', ['byte base64', '1']], 'and', [['verisig', ['arg', '0'], ['arg', '1'], ['addr', 'O']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'B']]]]]]]
 
 
+# Check if the string is syntactically correct. The function returns true if it is correct, false otherwise
+def str_correct(str):
+    if str == '':
+        return False
+    elif str[-1] != ']':
+        return False
+    else:
+        return True
+
+
 # This function returns a list splitted using the comma mark
 def convertToList(a_string):
     return list(a_string.split(", "))
@@ -148,15 +158,20 @@ def roll_out(myList):
 apostrophe = "'"
 # Read from file
 file = open("/var/www/html/secteal-string-java.txt", "r")
-myString = file.read()
-# myString = "[ 'txlen' ]"
-myString = myString.replace("[ ", "[")
-myString = myString.replace(" ]", "]")
-myString = myString.replace(",'", ", '")
-# Delete " ' " from the string -- This will help to process the string
-myString = myString.replace(apostrophe, "")
-# Return a list of all my substrings
-myList = getList(myString)
+myString = file.read().strip()
+
+# Check if the string is syntactically correct
+if str_correct(myString):
+    myString = myString.replace("[ ", "[")
+    myString = myString.replace(" ]", "]")
+    myString = myString.replace(",'", ", '")
+    # Delete " ' " from the string -- This will help to process the string
+    myString = myString.replace(apostrophe, "")
+    # Return a list of all mygloba substrings
+    myList = getList(myString)
+else:
+    myList = []
+    myList.append("Syntax Error.")
 
 fromParserORACLE = roll_out(myList)
 a = 0
@@ -280,8 +295,10 @@ def st2t(steal):
     elif h == 'ROUND':                                          # not in steal but may be useful
         return ['global Round']
 
+    elif steal == 'Syntax Error.':
+        return ['SYNTAX ERROR IN YOUR STRING']
     else:
-        return ['ERROR IN PARSING THE STRING when trying -->    ' + h]
+        return ['ERROR IN PARSING THE STRING']
 
 
 # ------------------------------------------------------------ Support functions
