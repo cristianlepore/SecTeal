@@ -1,1 +1,1 @@
-(txlin)
+(tx(0).type = int close)

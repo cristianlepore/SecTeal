@@ -7,8 +7,32 @@ function dropDownMenu() {
     var example1 = "";
 
     var oracle_text = "<b>" + "Oracle" + "</b>" + ". Either " + "<i>" + "a " + "</i>" + "or " + "<i>" + "b " + "</i>" + "to withdraw all the Algos in the contract, depending on the outcome of a certain boolean event, certified by an oracle " + "<i>" + "o " + "</i>" + "by signing the value 1 or 0, respectively. The contract only accepts close txs, " + "<i>" + "arg(0) " + "</i>" + "is the event's outcome, " + "<i>" + "arg(1) " + "</i>" + "is " + "<i>" + "o" + "</i>" + "’s signature on (" + "<i>" + "Oracle" + "</i>" + "," + "<i>" + "arg(0)" + "</i>" + "). After round r" + "<sub>" + "max" + "</sub>" + "   , a  can collect the money.";
-    var oracle_title = "Oracle";
-    var oracle_code = "((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(0).crcv = addr a)) or (((arg(0) = byte base64 0) and (verisig(arg(0),arg(1),addr o) and (tx(0).crcv = addr a))) or ((arg(0) = byte base64 1) and (verisig(arg(0),arg(1),addr o) and (tx(0).crcv = addr b))))))";
+    var oracle_title = "<b>" + "Oracle:" + "</b><br>";
+    var oracle_code = "(" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).type = int close)" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).fv > int 3000)" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).crcv = addr ZZAF5ARA4MEC5PVDOY2)" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "or" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(arg(0) = byte base64 P64JM5O5MQST63Q2KO)" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KO) and (tx(0).crcv = addr FLYFLXXD3PFSNJJBYAFZM))" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "or" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(arg(0) = byte base64 1)" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KO) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZM))" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
+        ")" + "<br>";
 
     var htlc_text = "<b>" + "Hash Time Lock Contract (HTLC)" + "</b>" + ". A user " + "<i>" + "a " + "</i> " + "promises that she will either reveal a secret s" + " <sub>" + "a" + "</sub>" + " by round r" + "<sub>" + "max" + "</sub>" + ", or pay a penalty to " + " <i> " + "b" + "</i>" + ". More sophisticated contracts, e.g. gambling games, use this mechanism to let players generate random numbers in a fair way. We define the HTLC as the following contract, parameterised on the two users " + " <i> " + "a" + "</i>" + ", " + " <i>" + " b " + "</i> " + "and the hash h" + "<sub>" + "a" + "</sub>" + " = H(s" + "<sub>" + "a" + "</sub>" + ") of the secret.";
     var htlc_title = "HTLC";

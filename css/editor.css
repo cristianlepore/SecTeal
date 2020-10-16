@@ -23,7 +23,7 @@
     float: right;
     width: 100%;
 }
-  
+
 .highight-menu {
     background-color: #777777 !important;
     color: white !important;
@@ -53,11 +53,12 @@
 }
 
 /* Green */
+
 .success {
     border-color: darkgreen;
     color: white;
 }
-  
+
 .success:hover {
     background-color: darkgreen;
     color: white;
@@ -71,7 +72,7 @@
 }
 
 #editor {
-  display: block;
-  margin: 0px;
-  width: 100%;
+    display: block;
+    margin: 0px;
+    width: 100%;
 }
