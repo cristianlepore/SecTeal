@@ -34,7 +34,7 @@ function dropDownMenu() {
 
 
     // Oracle
-    var oracle_text = "<b>" + "Oracle" + "</b>" + ". Either " + "<i>" + "a " + "</i>" + "or " + "<i>" + "b " + "</i>" + "to withdraw all the Algos in the contract, depending on the outcome of a certain boolean event, certified by an oracle " + "<i>" + "o " + "</i>" + "by signing the value 1 or 0, respectively. The contract only accepts close txs, " + "<i>" + "arg(0) " + "</i>" + "is the event's outcome, " + "<i>" + "arg(1) " + "</i>" + "is " + "<i>" + "o" + "</i>" + "’s signature on (" + "<i>" + "Oracle" + "</i>" + "," + "<i>" + "arg(0)" + "</i>" + "). After round r" + "<sub>" + "max" + "</sub>" + "   , a  can collect the money.";
+    var oracle_text = "<b>" + "Oracle" + "</b>" + ". Either " + "<i>" + "a " + "</i>= ZZAF5ARA4MEC5PVDOY2 or " + "<i>" + "b " + "</i>" + "= FLYFLXXD3PSDFFEYAFZM to withdraw all the Algos in the contract, depending on the outcome of a certain boolean event, certified by an oracle " + "<i>" + "o " + "</i>" + "by signing the value 1 or 0, respectively. The contract only accepts close txs, " + "<i>" + "arg(0) " + "</i>" + "is the event's outcome, " + "<i>" + "arg(1) " + "</i>" + "is " + "<i>" + "o" + "</i>" + "’s signature on (" + "<i>" + "Oracle" + "</i>" + "," + "<i>" + "arg(0)" + "</i>" + "). After round r" + "<sub>" + "max" + "</sub>" + "   , a  can collect the money.";
     var oracle_title = "<b>" + "Oracle:" + "</b><br>";
     var oracle_code = "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).type = int close)" + "<br>" +

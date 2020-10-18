@@ -133,18 +133,16 @@
                                     current
                                     tx <br>
                                     &emsp; | H(exp) &emsp;&emsp;&emsp;&emsp;&emsp; Hash <br>
-                                    &emsp; | versig(exp1, exp2, exp3) &emsp;&nbsp;&emsp;&nbsp;&nbsp; signature
+                                    &emsp; | verisig(exp1, exp2, exp3) &emsp;&nbsp;&emsp;&nbsp;&nbsp; signature
                                     verification <br>
                                     <br>
                                     val :: = byte base64 BYTE <br>
                                     &emsp; | int BYTE <br>
                                     &emsp; | addr BYTE <br>
                                     <br>
-                                    BYTE :: = [A-Z0-9]+ &nbsp;&emsp;&emsp;&emsp; any uppercase letters and numbers
-                                    <br>
-                                    INT :: = [a-z0-9]+ &emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp; any lowercase letters and
-                                    numbers
-                                    <br>
+                                    BYTE :: = [a-z0-9]+ &nbsp;&emsp;&emsp;&emsp; any sequence of letters and digits<br>
+                                    INT :: = [0-9]+ &emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp; any sequence of
+                                    digits<br>
                                     FIELD :: = 'snd' | 'rcv' | 'crcv' | 'val' | 'fv' | 'lv' | 'lx' | 'type' | 'asst' |
                                     'asstval' | 'asstsnd' | 'asstrcv' | 'casstrcv' | 'fee' | 'note' <br>
                             </i>
@@ -168,7 +166,7 @@
                 <div class="sixtyfive">
                     <div class="small_container">
                         <p id="subtitle">
-                        <h4>How To Write</h4>
+                        <h4>Compile Your Own Example</h4>
                         </p>
                         <p style="font-size: 12px;">
                             Insert your contract as an expression from the grammar <span
@@ -199,9 +197,9 @@
                         <select id="mySelection" onchange="dropDownMenu()">
                             <option value="rcvTxn" selected>Check receiver</option>
                             <option value="closeAccount">Close account</option>
-                            <option value="versig">Versig</option>
+                            <option value="versig">Verisig</option>
                             <option value="Oracle">Oracle</option>
-                            <option value="htlc">HTLC</option>
+                            <!-- <option value="htlc">HTLC</option> -->
                         </select>
                         <p class="vertical_space-half"></p>
                         <div style="font-size: 12px;" id="description">

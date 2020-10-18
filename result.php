@@ -129,18 +129,16 @@
                                     current
                                     tx <br>
                                     &emsp; | H(exp) &emsp;&emsp;&emsp;&emsp;&emsp; Hash <br>
-                                    &emsp; | versig(exp1, exp2, exp3) &emsp;&nbsp;&emsp;&nbsp;&nbsp; signature
+                                    &emsp; | verisig(exp1, exp2, exp3) &emsp;&nbsp;&emsp;&nbsp;&nbsp; signature
                                     verification <br>
                                     <br>
                                     val :: = byte base64 BYTE <br>
                                     &emsp; | int BYTE <br>
                                     &emsp; | addr BYTE <br>
                                     <br>
-                                    BYTE :: = [A-Z0-9]+ &nbsp;&emsp;&emsp;&emsp; any uppercase letters and numbers
-                                    <br>
-                                    INT :: = [a-z0-9]+ &emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp; any lowercase letters and
-                                    numbers
-                                    <br>
+                                    BYTE :: = [a-z0-9]+ &nbsp;&emsp;&emsp;&emsp; any sequence of letters and digits<br>
+                                    INT :: = [0-9]+ &emsp;&emsp;&nbsp;&nbsp;&emsp;&emsp;&emsp; any sequence of
+                                    digits<br>
                                     FIELD :: = 'snd' | 'rcv' | 'crcv' | 'val' | 'fv' | 'lv' | 'lx' | 'type' | 'asst' |
                                     'asstval' | 'asstsnd' | 'asstrcv' | 'casstrcv' | 'fee' | 'note' <br>
                             </i>
