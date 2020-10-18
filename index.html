@@ -183,6 +183,7 @@
                                 <input id="editor" type="text" name="contract" value="(tx(0).snd = addr address)">
                                 </input>
                                 <input class="button success" type="submit" value="Compile">
+                                </input>
                             </form>
                         </div>
                     </div>
@@ -202,7 +203,6 @@
                             <option value="Oracle">Oracle</option>
                             <option value="htlc">HTLC</option>
                         </select>
-
                         <p class="vertical_space-half"></p>
                         <div style="font-size: 12px;" id="description">
                             <hr style='height: 1px; border-width: 0; color: gray; background-color: gray'>
@@ -213,7 +213,14 @@
                             </b>
                             <br><br>
                             (tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)
-                            <br>
+                            <br><br>
+                            <form action="result.php" method="get">
+                                <input id="editor" type="hidden" name="contract"
+                                    value="(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)">
+                                </input>
+                                <input class="button success" type="submit" value="Compile this example">
+                                </input>
+                            </form>
                         </div>
                     </div>
                 </div>

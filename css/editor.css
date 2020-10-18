@@ -47,8 +47,9 @@
     margin-top: 7px;
     border: 1px solid white;
     background-color: green;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 7px;
     cursor: pointer;
 }
 
