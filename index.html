@@ -180,7 +180,7 @@
                         </p>
                         <div class="center">
                             <form action="result.php" method="get">
-                                <input id="editor" type="text" name="contract" value="(tx(0).type = int close)">
+                                <input id="editor" type="text" name="contract" value="(tx(0).snd = addr address)">
                                 </input>
                                 <input class="button success" type="submit" value="Compile">
                             </form>
@@ -196,10 +196,11 @@
                         </h4>
                         </p>
                         <select id="mySelection" onchange="dropDownMenu()">
-                            <option value="Example1">Basic example</option>
+                            <option value="sendTxn">Send txn</option>
+                            <option value="closeAccount">Close account</option>
+                            <option value="versig">Versig</option>
                             <option value="Oracle">Oracle</option>
                             <option value="htlc">HTLC</option>
-                            <option value="Other">Other</option>
                         </select>
 
                         <p class="vertical_space-half"></p>
