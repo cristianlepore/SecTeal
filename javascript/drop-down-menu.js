@@ -27,14 +27,14 @@ function dropDownMenu() {
 
 
     // Versig
-    var versig_text = "The script versig(e1,e2,e3) verifies a signature e2 on the message obtained by concatenating the enclosing script and e1, using public key e3." + "<br>";
-    var versig_title = "<b>" + "Versig:" + "</b><br>";
+    var versig_text = "The script verisig(e1,e2,e3) verifies a signature e2 on the message obtained by concatenating the enclosing script and e1, using public key e3." + "<br>";
+    var versig_title = "<b>" + "Verisig:" + "</b><br>";
     var versig_code = "verisig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>";
     var compile_versig = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='verisig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // Oracle
-    var oracle_text = "<b>" + "Oracle" + "</b>" + ". Either " + "<i>" + "a " + "</i>= ZZAF5ARA4MEC5PVDOY2 or " + "<i>" + "b " + "</i>" + "= FLYFLXXD3PSDFFEYAFZM to withdraw all the Algos in the contract, depending on the outcome of a certain boolean event, certified by an oracle " + "<i>" + "o " + "</i>" + "by signing the value 1 or 0, respectively. The contract only accepts close txs, " + "<i>" + "arg(0) " + "</i>" + "is the event's outcome, " + "<i>" + "arg(1) " + "</i>" + "is " + "<i>" + "o" + "</i>" + "’s signature on (" + "<i>" + "Oracle" + "</i>" + "," + "<i>" + "arg(0)" + "</i>" + "). After round r" + "<sub>" + "max" + "</sub>" + "   , a  can collect the money.";
+    var oracle_text = "<b>" + "Oracle" + "</b>" + ". Either " + "<i>" + "a " + "</i>= ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM or " + "<i>" + "b " + "</i>" + "= FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT can withdraw all the Algos in the contract, depending on the outcome of a certain boolean event. Such an event is certified by an oracle " + "<i>" + "o " + "</i>" + "= P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE by signing either the value 1 or 0. The contract only accepts a close tx. " + "<i>" + "arg(0) " + "</i>" + "is the event's outcome, " + "<i>" + "arg(1) " + "</i>" + "is " + "<i>" + "o" + "</i>" + "’s signature on (" + "<i>" + "Oracle" + "</i>" + "," + "<i>" + "arg(0)" + "</i>" + "). After round r" + "<sub>" + "max" + "</sub>" + " = 3000 , " + "<i>" + "a " + "</i>" + "can collect the money." + "<br>" + "The following " + "<i>" + "expression " + "</i>" + "encodes all constraints.";
     var oracle_title = "<b>" + "Oracle:" + "</b><br>";
     var oracle_code = "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).type = int close)" + "<br>" +
@@ -43,25 +43,25 @@ function dropDownMenu() {
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).fv > int 3000)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
-        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).crcv = addr ZZAF5ARA4MEC5PVDOY2)" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "or" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
-        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(arg(0) = byte base64 P64JM5O5MQST63Q2KO)" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(arg(0) = byte base64 0)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
-        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KO) and (tx(0).crcv = addr FLYFLXXD3PFSNJJBYAFZM))" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "or" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(arg(0) = byte base64 1)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
-        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KO) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZM))" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         ")" + "<br>";
-    var compile_oracle = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(0).crcv = addr a)) or (((arg(0) = byte base64 0) and (verisig(arg(0),arg(1),addr o) and (tx(0).crcv = addr a))) or ((arg(0) = byte base64 1) and (verisig(arg(0),arg(1),addr o) and (tx(0).crcv = addr b))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_oracle = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)) or (((arg(0) = byte base64 0) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))) or ((arg(0) = byte base64 1) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // HTLC
