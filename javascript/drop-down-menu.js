@@ -5,9 +5,9 @@ function dropDownMenu() {
     var horizontal_line = "<hr style='height: 1px; border-width: 0; color: gray; background-color: gray'>";
 
     // Send transaction
-    var sendTxn_text = "This is a first simple example. The scenario shows a check on the receiver address.";
-    var sendTxn_title = "<b>" + "Send Transaction:" + "</b><br>";
-    var sendTxn_code = "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>";
+    var rcvTxn_text = "This is a first simple example. The scenario shows a check on the receiver address.";
+    var rcvTxn_title = "<b>" + "Check receiver:" + "</b><br>";
+    var rcvTxn_code = "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>";
 
 
     // Close account
@@ -67,9 +67,9 @@ function dropDownMenu() {
 
 
     // Check the correct example
-    if (value === 'sendTxn') {
-        sendTxn = horizontal_line + sendTxn_text + "<p class='vertical_space-half'></p>" + sendTxn_title + "<br>" + sendTxn_code;
-        document.getElementById("description").innerHTML = sendTxn;
+    if (value === 'rcvTxn') {
+        rcvTxn = horizontal_line + rcvTxn_text + "<p class='vertical_space-half'></p>" + rcvTxn_title + "<br>" + rcvTxn_code;
+        document.getElementById("description").innerHTML = rcvTxn;
     } else if (value === 'closeAccount') {
         closeAccount = horizontal_line + closeAccount_text + "<p class='vertical_space-half'></p>" + closeAccount_title + "<br>" + closeAccount_code;
         document.getElementById("description").innerHTML = closeAccount;

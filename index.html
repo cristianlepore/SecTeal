@@ -196,7 +196,7 @@
                         </h4>
                         </p>
                         <select id="mySelection" onchange="dropDownMenu()">
-                            <option value="sendTxn">Send txn</option>
+                            <option value="rcvTxn" selected>Check receiver</option>
                             <option value="closeAccount">Close account</option>
                             <option value="versig">Versig</option>
                             <option value="Oracle">Oracle</option>
@@ -204,8 +204,16 @@
                         </select>
 
                         <p class="vertical_space-half"></p>
-                        <div style="font-size: 12px;">
-                            <p id="description"></p>
+                        <div style="font-size: 12px;" id="description">
+                            <hr style='height: 1px; border-width: 0; color: gray; background-color: gray'>
+                            This is a first simple example. The scenario shows a check on the receiver address.
+                            <p class='vertical_space-half'></p>
+                            <b>
+                                Check receiver:
+                            </b>
+                            <br><br>
+                            (tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)
+                            <br>
                         </div>
                     </div>
                 </div>

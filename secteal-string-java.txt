@@ -1,1 +1,1 @@
-[ 'verisig', [ 'arg', '0'], [ 'arg', '1'], ['addr', 'zzaf5ara4mec5pvdop64jm5o5mqst63q2koy2flyflxxd3pfsnjjbyafzm']]
+[[ 'tx', '0', 'snd'], '=', ['addr', 'address']]
