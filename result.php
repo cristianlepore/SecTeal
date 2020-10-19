@@ -176,6 +176,9 @@ $contract = trim($contract);
 // change everything in lowercase letters.
 $contract = strtolower($contract);
 
+// Cosider the case of H( to keep in uppercase
+$contract = str_replace("h(", "H(", $contract);
+
 // $contract = str_replace(' ', '', $contract);
 
 // Check if contract start withouth parenthesis. Add a parenthesis in the beginning and at the end of the formula
