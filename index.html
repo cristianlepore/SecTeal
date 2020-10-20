@@ -205,7 +205,17 @@
                             <option value="pp">Periodic Payment</option>
                         </select>
                         <p class="vertical_space-half"></p>
+
                         <div style="font-size: 12px;" id="description">
+                            <!-- Compile this example button. -->
+                            <form action="result.php" method="get">
+                                <input id="editor" type="hidden" name="contract"
+                                    value="(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)">
+                                </input>
+                                <input class="button success" type="submit" value="Compile this example">
+                                </input>
+                            </form>
+
                             <hr style='height: 1px; border-width: 0; color: gray; background-color: gray'>
                             This is a first simple example. The scenario shows a check on the receiver address.
                             <p class='vertical_space-half'></p>
@@ -214,14 +224,7 @@
                             </b>
                             <br><br>
                             (tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)
-                            <br><br>
-                            <form action="result.php" method="get">
-                                <input id="editor" type="hidden" name="contract"
-                                    value="(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)">
-                                </input>
-                                <input class="button success" type="submit" value="Compile this example">
-                                </input>
-                            </form>
+                            <br>
                         </div>
                     </div>
                 </div>

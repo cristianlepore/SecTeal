@@ -9,7 +9,7 @@ function dropDownMenu() {
     var rcvTxn_text = "This is a first simple example. The scenario shows a check on the receiver address.";
     var rcvTxn_title = "<b>" + "Check receiver:" + "</b><br>";
     var rcvTxn_code = "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>";
-    var compile_rcvTxn = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_rcvTxn = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
     // Close account
     var closeAccount_text = "This is a simple example. The sample describes a quite common scenario. First it checks that the transacion fee is less that 0,001 Algos, then it sends Algos to the receiver and sets the close reminder field to close the account and withdraw the deposit from it.";
@@ -23,14 +23,14 @@ function dropDownMenu() {
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         ")" + "<br>";
-    var compile_closeAccount = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).fee < int 1000) and ((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_closeAccount = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).fee < int 1000) and ((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // Versig
     var versig_text = "The expression verisig(e1,e2,e3) verifies a signature e2 on the message obtained by concatenating the enclosing script and e1, using public key e3." + "<br>";
     var versig_title = "<b>" + "Verisig:" + "</b><br>";
     var versig_code = "verisig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>";
-    var compile_versig = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='verisig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_versig = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='verisig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // Oracle
@@ -61,7 +61,7 @@ function dropDownMenu() {
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         ")" + "<br>";
-    var compile_oracle = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)) or (((arg(0) = byte base64 0) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))) or ((arg(0) = byte base64 1) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_oracle = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)) or (((arg(0) = byte base64 0) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))) or ((arg(0) = byte base64 1) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // HTLC
@@ -89,7 +89,7 @@ function dropDownMenu() {
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         ")" + "<br>";
     var htlc_conclusion = "The contract accepts only close transactions with receiver " + "<i>" + "a " + "</i>" + "or " + "<i>" + "b" + "</i>" + ". User " + "<i>" + "a " + "</i>" + "can collect the funds in the contract only by providing the secret s" + "<sub>" + "a " + "</sub>" + "in " + "<i>" + "arg(0)" + "</i>" + ", effectively making s" + "<sub>" + "a " + "</sub>" + "public. Instead, if " + "<i>" + "a " + "</i>" + "does not reveal s" + "<sub>" + "a " + "</sub>" + ", then " + "<i>" + "b " + "</i>" + "can collect the funds after round r" + "<sub>" + "max" + "</sub>" + ".";
-    var compile_htlc = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and ((tx(0).asst = byte base64 RE9QNjRKTTVPNU1RU1Q2NEpNNU81TVFTWlpBRjVBUktPWTJGTFlGTEpNNU81TVFTVDYzUEZTTkpKRw) and (((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (H(arg(int 0)) = byte base64 N2M2ODljY2Q1NWQzODUwNGZlMDBhYWEwYzMxYWQyYzY4YmFmOTA1NTc0YjM1YWQwMGRmMDMxNzY4YTZmMDFiZg)) or ((tx(0).rcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT) and (tx(0).fv > int 3000)))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_htlc = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and ((tx(0).asst = byte base64 RE9QNjRKTTVPNU1RU1Q2NEpNNU81TVFTWlpBRjVBUktPWTJGTFlGTEpNNU81TVFTVDYzUEZTTkpKRw) and (((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (H(arg(int 0)) = byte base64 N2M2ODljY2Q1NWQzODUwNGZlMDBhYWEwYzMxYWQyYzY4YmFmOTA1NTc0YjM1YWQwMGRmMDMxNzY4YTZmMDFiZg)) or ((tx(0).rcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT) and (tx(0).fv > int 3000)))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // Periodic Payment
@@ -111,28 +111,28 @@ function dropDownMenu() {
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         ")" + "<br>";
-    var pp_conclusion = "The contract accepts only " + "<i>" + "pay" + "</i>" + " transactions of " + "<i>" + "v" + "</i>" + " Algos to receivera. The conditions " + "<i>" + "tx.fv % p = 0" + "</i>" + " and " + "<i>" + "tx.lv = tx.fv + d" + "</i>" + " ensure that the contract only accepts transactions with validity interval " + "<i>" + "[k p, k p + d]" + "</i>" + ", for " + "<i>" + "k ∈ N" + "</i>" + ". The condition " + "<i>" + "tx.lx = n" + "</i>" + " ensures that at most one such transactions is accepted for each time window.";
-    var compile_pp = "<br>" + "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int pay) and ((tx(0).val = int 10000) and ((tx(0).asst = byte base64 RE9QNjRKTTVPNU1RU1Q2NEpNNU81TVFTWlpBRjVBUktPWTJGTFlGTEpNNU81TVFTVDYzUEZTTkpKRw) and ((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (((tx(0).fv % int 2000) = int 0) and (((tx(0).lv = tx(0).fv) + int 1000) and (tx(0).lx = int 4000)))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var pp_conclusion = "The contract accepts only " + "<i>" + "pay" + "</i>" + " transactions of " + "<i>" + "v" + "</i>" + " Algos to receiver " + "<i>" + "a" + "</i>" + ". The conditions " + "<i>" + "tx.fv % p = 0" + "</i>" + " and " + "<i>" + "tx.lv = tx.fv + d" + "</i>" + " ensure that the contract only accepts transactions with validity interval " + "<i>" + "[k p, k p + d]" + "</i>" + ", for " + "<i>" + "k ∈ N" + "</i>" + ". The condition " + "<i>" + "tx.lx = n" + "</i>" + " ensures that at most one such transactions is accepted for each time window.";
+    var compile_pp = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int pay) and ((tx(0).val = int 10000) and ((tx(0).asst = byte base64 RE9QNjRKTTVPNU1RU1Q2NEpNNU81TVFTWlpBRjVBUktPWTJGTFlGTEpNNU81TVFTVDYzUEZTTkpKRw) and ((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (((tx(0).fv % int 2000) = int 0) and (((tx(0).lv = tx(0).fv) + int 1000) and (tx(0).lx = int 4000)))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // Check the correct example
     if (value === 'rcvTxn') {
-        rcvTxn = horizontal_line + rcvTxn_text + "<p class='vertical_space-half'></p>" + rcvTxn_title + "<br>" + rcvTxn_code + compile_rcvTxn;
+        rcvTxn = compile_rcvTxn + horizontal_line + rcvTxn_text + "<p class='vertical_space-half'></p>" + rcvTxn_title + "<br>" + rcvTxn_code;
         document.getElementById("description").innerHTML = rcvTxn;
     } else if (value === 'closeAccount') {
-        closeAccount = horizontal_line + closeAccount_text + "<p class='vertical_space-half'></p>" + closeAccount_title + "<br>" + closeAccount_code + compile_closeAccount;
+        closeAccount = compile_closeAccount + horizontal_line + closeAccount_text + "<p class='vertical_space-half'></p>" + closeAccount_title + "<br>" + closeAccount_code;
         document.getElementById("description").innerHTML = closeAccount;
     } else if (value === 'versig') {
-        versig = horizontal_line + versig_text + "<p class='vertical_space-half'></p>" + versig_title + "<br>" + versig_code + compile_versig;
+        versig = compile_versig + horizontal_line + versig_text + "<p class='vertical_space-half'></p>" + versig_title + "<br>" + versig_code;
         document.getElementById("description").innerHTML = versig;
     } else if (value === 'Oracle') {
-        oracle = horizontal_line + oracle_text + "<p class='vertical_space-half'></p>" + oracle_title + "<br>" + oracle_code + compile_oracle;
+        oracle = compile_oracle + horizontal_line + oracle_text + "<p class='vertical_space-half'></p>" + oracle_title + "<br>" + oracle_code;
         document.getElementById("description").innerHTML = oracle;
     } else if (value === 'htlc') {
-        htlc = horizontal_line + htlc_text + "<p class='vertical_space-half'></p>" + htlc_title + "<br>" + htlc_code + "<br>" + htlc_conclusion + compile_htlc;
+        htlc = compile_htlc + horizontal_line + htlc_text + "<p class='vertical_space-half'></p>" + htlc_title + "<br>" + htlc_code + "<br>" + htlc_conclusion;
         document.getElementById("description").innerHTML = htlc;
     } else if (value === 'pp') {
-        pp = horizontal_line + pp_text + "<p class='vertical_space-half'></p>" + pp_title + "<br>" + pp_code + "<br>" + pp_conclusion + compile_pp;
+        pp = compile_pp + horizontal_line + pp_text + "<p class='vertical_space-half'></p>" + pp_title + "<br>" + pp_code + "<br>" + pp_conclusion;
         document.getElementById("description").innerHTML = pp;
     }
 
