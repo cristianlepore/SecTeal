@@ -180,7 +180,7 @@
                         <div class="center">
                             <form action="result.php" method="get">
                                 <input id="editor" type="text" name="contract"
-                                    value="(tx(0).snd = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)">
+                                    placeholder="Write your own example: e.g. (tx(0).type = int close) ">
                                 </input>
                                 <input class="button success" type="submit" value="Compile">
                                 </input>
@@ -196,6 +196,7 @@
                             Select an Example
                         </h4>
                         </p>
+
                         <select id="mySelection" onchange="dropDownMenu()">
                             <option value="rcvTxn" selected>Check receiver</option>
                             <option value="closeAccount">Close account</option>
@@ -207,14 +208,16 @@
                         <p class="vertical_space-half"></p>
 
                         <div style="font-size: 12px;" id="description">
-                            <!-- Compile this example button. -->
-                            <form action="result.php" method="get">
-                                <input id="editor" type="hidden" name="contract"
-                                    value="(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)">
-                                </input>
-                                <input class="button success" type="submit" value="Compile this example">
-                                </input>
-                            </form>
+                            <div class="autocomplete">
+                                <!-- Compile this example button. -->
+                                <form action="result.php" method="get">
+                                    <input id="editor" type="hidden" name="contract"
+                                        value="(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)">
+                                    </input>
+                                    <input class="button success" type="submit" value="Compile this example">
+                                    </input>
+                                </form>
+                            </div>
 
                             <hr style='height: 1px; border-width: 0; color: gray; background-color: gray'>
                             This is a first simple example. The scenario shows a check on the receiver address.

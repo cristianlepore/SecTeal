@@ -43,10 +43,20 @@
     max-width: 250px;
 }
 
+.button_compile {
+    margin-top: 0px;
+    border: 1px solid white;
+    background-color: DodgerBlue;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
 .button {
     margin-top: 7px;
     border: 1px solid white;
-    background-color: green;
+    background-color: DodgerBlue;
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 7px;
@@ -56,12 +66,11 @@
 /* Green */
 
 .success {
-    border-color: darkgreen;
     color: white;
 }
 
 .success:hover {
-    background-color: darkgreen;
+    background-color: blue;
     color: white;
 }
 
