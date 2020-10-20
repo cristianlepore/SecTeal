@@ -106,13 +106,13 @@ function dropDownMenu() {
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
-        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(((tx(0).fv % int 2000) = int 0) and (((tx(0).lv = tx(0).fv) + int 1000) and (tx(0).lx = int 4000)))" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(((tx(0).fv % int 2000) = int 0) and ((tx(0).lv < (tx(0).fv + int 1000)) and (tx(0).lx = int 4000)))" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         ")" + "<br>";
     var pp_conclusion = "The contract accepts only " + "<i>" + "pay" + "</i>" + " transactions of " + "<i>" + "v" + "</i>" + " Algos to receiver " + "<i>" + "a" + "</i>" + ". The conditions " + "<i>" + "tx.fv % p = 0" + "</i>" + " and " + "<i>" + "tx.lv = tx.fv + d" + "</i>" + " ensure that the contract only accepts transactions with validity interval " + "<i>" + "[k p, k p + d]" + "</i>" + ", for " + "<i>" + "k ∈ N" + "</i>" + ". The condition " + "<i>" + "tx.lx = n" + "</i>" + " ensures that at most one such transactions is accepted for each time window.";
-    var compile_pp = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int pay) and ((tx(0).val = int 10000) and ((tx(0).asst = byte base64 RE9QNjRKTTVPNU1RU1Q2NEpNNU81TVFTWlpBRjVBUktPWTJGTFlGTEpNNU81TVFTVDYzUEZTTkpKRw) and ((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (((tx(0).fv % int 2000) = int 0) and (((tx(0).lv = tx(0).fv) + int 1000) and (tx(0).lx = int 4000)))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_pp = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int pay) and ((tx(0).val = int 10000) and ((tx(0).asst = byte base64 RE9QNjRKTTVPNU1RU1Q2NEpNNU81TVFTWlpBRjVBUktPWTJGTFlGTEpNNU81TVFTVDYzUEZTTkpKRw) and ((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (((tx(0).fv % int 2000) = int 0) and ((tx(0).lv < (tx(0).fv + int 1000)) and (tx(0).lx = int 4000)))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // Check the correct example
