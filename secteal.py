@@ -48,12 +48,12 @@ testORACLE = ['and',
                         ]
                        ],
                ['or',  ['and', ['=', ['arg', '0'], ['byte base64', '0']],
-                        ['and', ['verisig', ['arg', '0'], ['arg', '1'], ['addr', 'o']],
+                        ['and', ['versig', ['arg', '0'], ['arg', '1'], ['addr', 'o']],
                          ['=', ['tx', '0', 'crcv'], ['addr', 'a']]
                          ]
                         ],
                 ['and', ['=', ['arg', '0'], ['byte base64', '1']],
-                 ['and', ['verisig', ['arg', '0'], ['arg', '1'], ['addr', 'o']],
+                 ['and', ['versig', ['arg', '0'], ['arg', '1'], ['addr', 'o']],
                   ['=', ['tx', '0', 'crcv'], ['addr', 'b']]
                   ]
                  ]
@@ -94,8 +94,8 @@ toParserORACLE = "((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(
 # This is the string retuned by the parser (infix) starting from the above string toParserORACLE
 #
 
-fromParserORACLE = [[['tx', '0', 'type'], '=', ['int', 'close']], 'and', [[[['tx', '0', 'fv'], '>', ['int', '3000']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'A']]], 'or', [[[['arg', '0'], '=', ['byte base64', '0']], 'and', [['verisig', ['arg', '0'], [
-    'arg', '1'], ['addr', 'O']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'A']]]], 'or', [[['arg', '0'], '=', ['byte base64', '1']], 'and', [['verisig', ['arg', '0'], ['arg', '1'], ['addr', 'O']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'B']]]]]]]
+fromParserORACLE = [[['tx', '0', 'type'], '=', ['int', 'close']], 'and', [[[['tx', '0', 'fv'], '>', ['int', '3000']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'A']]], 'or', [[[['arg', '0'], '=', ['byte base64', '0']], 'and', [['versig', ['arg', '0'], [
+    'arg', '1'], ['addr', 'O']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'A']]]], 'or', [[['arg', '0'], '=', ['byte base64', '1']], 'and', [['versig', ['arg', '0'], ['arg', '1'], ['addr', 'O']], 'and', [['tx', '0', 'crcv'], '=', ['addr', 'B']]]]]]]
 
 
 # Check if the string is syntactically correct. The function returns true if it is correct, false otherwise
@@ -267,8 +267,8 @@ def st2t(steal):
     elif h == 'H':                                              # [H, [exp]]
         return st2t(steal[1]) + ['sha256']
 
-    # [verisig, [data], [sig], [pubkey]]  -- cost 1900
-    elif h == 'verisig':
+    # [versig, [data], [sig], [pubkey]]  -- cost 1900
+    elif h == 'versig':
         # with pubkey top in stack
         # << NOT SURE HERE
         # assumption: parameters are pushed with byte base64 data
@@ -287,7 +287,7 @@ def st2t(steal):
 
 # <<< How to treat values is not well defined. Quite often you need to express specific types of values.
 #   As an example see at the end of https://developer.algorand.org/docs/reference/teal/templates/delegate_keyreg/
-#   the specification of the input to verisig. This is not expressed/expressable in STEAL.
+#   the specification of the input to versig. This is not expressed/expressable in STEAL.
 #
 #   For the moment we use the above three "basic value kinds" and will adapt as needed. These have to be
 #   expressable in STEAL.
@@ -317,7 +317,7 @@ def st2t(steal):
 # [ arg n ]      |
 # [ arglen ]     |
 # [H exp ]       |
-# [verisig exp exp exp ] |
+# [versig exp exp exp ] |
 # [ val ]
 ##
 

@@ -1,1 +1,1 @@
-H(int close)
+(H(arg(int 0)) = byte base64 N2M2ODljY2Q1NWQzODUwNGZlMD)

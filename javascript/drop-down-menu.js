@@ -27,10 +27,10 @@ function dropDownMenu() {
 
 
     // Versig
-    var versig_text = "The expression verisig(e1,e2,e3) verifies a signature e2 on the message obtained by concatenating the enclosing script and e1, using public key e3." + "<br>";
-    var versig_title = "<b>" + "Verisig:" + "</b><br>";
-    var versig_code = "verisig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>";
-    var compile_versig = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='verisig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var versig_text = "The expression versig(e1,e2,e3) verifies a signature e2 on the message obtained by concatenating the enclosing script and e1, using public key e3." + "<br>";
+    var versig_title = "<b>" + "Versig:" + "</b><br>";
+    var versig_code = "versig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" + "<br>";
+    var compile_versig = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='versig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // Oracle
@@ -50,18 +50,18 @@ function dropDownMenu() {
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(arg(0) = byte base64 0)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
-        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(versig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "or" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(arg(0) = byte base64 1)" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "and" + "<br>" +
-        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))" + "<br>" +
+        "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "(versig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         "&nbsp&nbsp&nbsp&nbsp&nbsp" + ")" + "<br>" +
         ")" + "<br>";
-    var compile_oracle = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)) or (((arg(0) = byte base64 0) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))) or ((arg(0) = byte base64 1) and (verisig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
+    var compile_oracle = "<form action='result.php' method='get'>" + "<input id='editor' type='hidden' name='contract' value='((tx(0).type = int close) and (((tx(0).fv > int 3000) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)) or (((arg(0) = byte base64 0) and (versig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))) or ((arg(0) = byte base64 1) and (versig(arg(0),arg(1),addr P64JM5O5MQST63Q2KOM5O5MQST63Q2KDOP64JM5O5QST63Q2KOY2FSNJFE) and (tx(0).crcv = addr FLYFLXXD3PSDFFEYAFZMJM5O5MQST63Q2KOA4MEC5PYFLSNJJBD5MQSERT))))))'>" + "</input>" + "<input class='button success' type='submit' value='Compile this example'>" + "</input>" + "</form >";
 
 
     // HTLC

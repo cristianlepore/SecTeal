@@ -129,7 +129,7 @@
                                     current
                                     tx <br>
                                     &emsp; | H(exp) &emsp;&emsp;&emsp;&emsp;&emsp; Hash <br>
-                                    &emsp; | verisig(exp1, exp2, exp3) &emsp;&nbsp;&emsp;&nbsp;&nbsp; signature
+                                    &emsp; | versig(exp1, exp2, exp3) &emsp;&nbsp;&emsp;&nbsp;&nbsp; signature
                                     verification <br>
                                     <br>
                                     val :: = byte base64 BYTE <br>
@@ -172,12 +172,6 @@
 
 $contract = $_GET["contract"];
 $contract = trim($contract);
-
-// change everything in lowercase letters.
-$contract = strtolower($contract);
-
-// Cosider the case of H( to keep in uppercase
-$contract = str_replace("h(", "H(", $contract);
 
 // $contract = str_replace(' ', '', $contract);
 
