@@ -160,7 +160,7 @@
                 </div>
                 <div class="sixtyfive">
                     <p id="subtitle">
-                        <h4>Result in pyTeal</h4>
+                        <h4>Result in Teal</h4>
                     </p>
                     <p style="font-size: 12px;">
                         Copy and paste this code into your Algorand stateless smart contract.
@@ -169,6 +169,9 @@
 <?php 
 
 $contract = $_GET["contract"];
+$example_number = substr($contract, -3);
+if(substr($contract, -3, -1) == '&/')
+    $contract = substr($contract, 0, -3);
 $contract = trim($contract);
 
 // $contract = str_replace(' ', '', $contract);
@@ -210,7 +213,11 @@ if($pos)
 
 ?>
 
-                    <div class="center">
+<div class="tab">
+  <button class="tablinks" onclick="openEditor(event, 'Teal')">Teal</button>
+  <button class="tablinks" onclick="openEditor(event, 'SecTeal')">SecTeal</button>
+</div>
+                    <div id="Teal" class="center">
                         <div id="box" style="background-color: white;">
 <?php
 
@@ -220,8 +227,83 @@ echo "<div>".$message."</div>";
 
 ?>
 
-    </div>
-</div>
+                        </div>
+                    </div>
+
+                    <div id="SecTeal" class="center" style="display:none;">
+                        <div id="box" style="background-color: white;">
+<?php
+if($example_number == '&/1')
+    echo "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)";
+elseif($example_number == '&/2')
+    echo "("."<br>"."&nbsp&nbsp&nbsp&nbsp&nbsp"."(tx(0).fee < int 1000)"."<br>"."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"."and"."<br>"."&nbsp&nbsp&nbsp&nbsp&nbsp"."("."<br>"."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"."(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)"."<br>"."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"."and"."<br>"."&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"."(tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)"."<br>"."&nbsp&nbsp&nbsp&nbsp&nbsp".")"."<br>".")"."<br>";
+elseif($example_number == '&/3')
+    echo "versig(arg(0),arg(1),addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)";
+elseif($example_number == '&/4')
+    echo "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).type = int close)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).fv > int 3000)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "or" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(arg(0) = byte base64 bXkgc3RyaW5n)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(versig(arg(0),arg(1),addr NKOS3PFXD73DDFSEE6SSQQ6SEZGOQBTE6KQAGEDQZRGOCXSNH3XGCXWGHU) and (tx(0).crcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM))" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "or" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(arg(0) = byte base64 bXkgc3RyaW5n)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(versig(arg(0),arg(1),addr NKOS3PFXD73DDFSEE6SSQQ6SEZGOQBTE6KQAGEDQZRGOCXSNH3XGCXWGHU) and (tx(0).crcv = addr SOEI4UA72A7ZL5P25GNISSVWW724YABSGZ7GHW5ERV4QKK2XSXLXGXPG5Y))" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    ")" . "<br>";
+elseif($example_number == '&/5')
+    echo "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).type = int close) " . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(H(arg(0)) = byte base64 bXkgc3RyaW5n)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "or" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).rcv = addr SOEI4UA72A7ZL5P25GNISSVWW724YABSGZ7GHW5ERV4QKK2XSXLXGXPG5Y)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).fv > int 3000)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    ")" . "<br>";
+elseif($example_number == '&/6')
+    echo "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).type = int pay)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "((tx(0).val = int 10000)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "and" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . "(((tx(0).fv % int 2000) = int 0) and ((tx(0).lv < (tx(0).fv . int 1000)) and (tx(0).lx = int 4000)))" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    "&nbsp&nbsp&nbsp&nbsp&nbsp" . ")" . "<br>" .
+    ")" . "<br>";
+else
+    echo $contract;
+
+?>
+                        </div>
+                    </div>
+
                             <br>
                             <form action="index.html">
                                 <button class="button success">Go Back</button>
