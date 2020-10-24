@@ -1,1 +1,1 @@
-((tx(0).type = int pay) and ((tx(0).val = int 10000) and ((tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM) and (((tx(0).fv % int 2000) = int 0) and (((tx(0).lv = tx(0).fv) + int 2000) and (tx(0).lx = int 4000))))))
+(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)
