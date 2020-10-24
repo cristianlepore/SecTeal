@@ -165,6 +165,9 @@
                     <p style="font-size: 12px;">
                         Copy and paste this code into your Algorand stateless smart contract.
                     </p>
+                    <p style="font-size:12px;">
+                        <span style="color: red; font-size: 12px;">Note</span>: the mnemonic codes (open and close) have been changed in the numeric one.
+                    </p>
                     <div class="center">
                         <div id="box" style="background-color: white;">
 

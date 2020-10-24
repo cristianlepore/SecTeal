@@ -174,7 +174,7 @@ else:
     myList.append("Syntax Error.")
 
 fromParserORACLE = roll_out(myList)
-a = 0
+
 # >>> Cristian, la lista sopra e' quello che dovrebbe ricevere in input.
 
 # ------------------------------------------------------------
@@ -347,6 +347,20 @@ def lprint(l):
 
 # Prepare the result to be shown on screen
 def print_string(l):
+    # This part is a workaround related to the arg 0 when the next string is byte b64.
+    length = len(l)
+    for i in range(length):
+        if("int close" in l[i]):
+            l[i] = "int 0"
+        elif("int open" in l[i]):
+            l[i] = "int 1"
+        elif("CloseReminderTo" in l[i]):
+            l[i] = "txn CloseRemainderTo"
+        elif("byte base64" in l[i]):
+            l[i] = l[i].replace("byte base64", "byte b64")
+            l[i-1] = l[i-1].replace("arg ", "arg_")
+
+    # This is an important part. It cannot be dropped.
     str = ""
     for i in l:
         str += i + "<br>"
