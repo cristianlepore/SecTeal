@@ -135,7 +135,7 @@ def getList(myString):
     [start, end] = getSubstring(myString)
     while start != 0:
         subString = myString[start-1:end+1]
-        myString = myString.replace(subString, "list_"+str(i), 1)
+        myString = myString.replace(subString, "list_" + str(i), 1)
         subString = subString.strip('[]')
         myList.append(convertToList(subString))
         i += 1
@@ -143,7 +143,7 @@ def getList(myString):
     return myList
 
 
-# Buid in the list
+# Build the list
 def roll_out(myList):
     index = 0
     while index < len(myList):

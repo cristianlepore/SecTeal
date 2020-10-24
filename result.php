@@ -165,11 +165,6 @@
                     <p style="font-size: 12px;">
                         Copy and paste this code into your Algorand stateless smart contract.
                     </p>
-                    <p style="font-size:12px;">
-                        <span style="color: red; font-size: 12px;">Note</span>: the mnemonic codes (open and close) have been changed in the numeric one.
-                    </p>
-                    <div class="center">
-                        <div id="box" style="background-color: white;">
 
 <?php 
 
@@ -207,6 +202,17 @@ exec('java -jar Parser.jar 2>&1', $result);
 // Display the result on screen
 // print_r($result);
 
+
+// print the message below only if there is open or close in the code.
+$pos = strpos($contract, "int close");
+if($pos)
+    echo "<p style='font-size:12px;'><span style='color: red; font-size: 12px;'>Note</span>: the mnemonic codes (open and close) have been changed in the numeric one.</p>";
+
+?>
+
+                    <div class="center">
+                        <div id="box" style="background-color: white;">
+<?php
 
 // Execute the Python program
 $message = exec("python3 ./secteal.py 2>&1");
