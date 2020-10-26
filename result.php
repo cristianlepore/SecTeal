@@ -69,8 +69,7 @@
                                 href="https://developer.algorand.org/docs/features/asc1/stateless/"
                                 target="_blank"><u>smart
                                     contracts</u></a>
-                            (stateless ASC1) derived from the formal model of Algorand presented in <a
-                                href="#footnote1">[OMITTED]</a>. The model abstracts stateless smart contracts by means
+                            (stateless ASC1) derived from the formal model of Algorand presented in [OMITTED]. The model abstracts stateless smart contracts by means
                             of a <i>language of expressions</i> that evaluate to true or false.
                         </p>
                         <p style="font-size: 12px;">
@@ -159,9 +158,17 @@
                     -->
                 </div>
                 <div class="sixtyfive">
-                    <p id="subtitle">
-                        <h4>Result in Teal</h4>
-                    </p>
+                    <div class="thirtyfive">
+                        <p id="subtitle">
+                            <h4>Result in Teal</h4>
+                        </p>
+                    </div>
+                    <div class="sixtyfive">
+                        <form action="index.html">
+                            <button class="button success">Go Back</button>
+                        </form>
+                    </div>
+                    <br><br><br><br>
                     <p style="font-size: 12px;">
                         Copy and paste this code into your Algorand stateless smart contract.
                     </p>
@@ -303,22 +310,6 @@ else
 ?>
                         </div>
                     </div>
-
-                            <br>
-                            <form action="index.html">
-                                <button class="button success">Go Back</button>
-                            </form>
-                        </div>
-                </div>
-            </div>
-        </div>
-
-        <div id=footnote1>
-            <div id="aboutUs" class="separator-even">
-                <div class="container">
-                    <p style="font-size: 12px;">
-                        Footnote available soon.
-                    </p>
                 </div>
             </div>
         </div>
