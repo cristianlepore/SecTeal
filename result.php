@@ -160,12 +160,12 @@
                 <div class="sixtyfive">
                     <div class="thirtyfive">
                         <p id="subtitle">
-                            <h4>Result in Teal</h4>
+                            <h4>Result</h4>
                         </p>
                     </div>
                     <div class="sixtyfive">
                         <form action="index.html">
-                            <button class="button success">Go Back</button>
+                            <button class="button success"><< Go Back</button>
                         </form>
                     </div>
                     <br><br><br><br>
@@ -220,12 +220,17 @@ if($pos)
 
 ?>
 
+<!--
 <div class="tab">
   <button class="tablinks" onclick="openEditor(event, 'Teal')">Teal</button>
   <button class="tablinks" onclick="openEditor(event, 'SecTeal')">SecTeal</button>
 </div>
+-->
+            <div class="tab">
+                <div class="tablinks">Teal</div>
                     <div id="Teal" class="center">
                         <div id="box" style="background-color: white;">
+
 <?php
 
 // Execute the Python program
@@ -236,8 +241,11 @@ echo "<div>".$message."</div>";
 
                         </div>
                     </div>
-
-                    <div id="SecTeal" class="center" style="display:none;">
+            </div>
+            <br>
+            <div class="tab">
+                <div class="tablinks">SecTeal</div>
+                    <div id="SecTeal" class="center">
                         <div id="box" style="background-color: white;">
 <?php
 if($example_number == '&/1')
