@@ -352,7 +352,7 @@ def print_string(l):
     for i in range(length):
         if("int close" in l[i]):
             l[i] = "int 0"
-        elif("int open" in l[i]):
+        elif("int pay" in l[i]):
             l[i] = "int 1"
         elif("CloseReminderTo" in l[i]):
             l[i] = "txn CloseRemainderTo"

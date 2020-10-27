@@ -170,7 +170,10 @@
                     </div>
                     <br><br><br><br>
                     <p style="font-size: 12px;">
-                        Copy and paste this code into your Algorand stateless smart contract.
+                        The compiled code can be used to deploy an Algorand stateless smart contract.
+                    </p>
+                    <p style="font-size: 12px;">
+                        Presented examples properly compile and are accepted by Algorand MainNet, TestNet and BetaNet networks. 
                     </p>
 
 <?php 
@@ -214,9 +217,10 @@ exec('java -jar Parser.jar 2>&1', $result);
 
 
 // print the message below only if there is open or close in the code.
-$pos = strpos($contract, "int close");
-if($pos)
-    echo "<p style='font-size:12px;'><span style='color: red; font-size: 12px;'>Note</span>: the mnemonic codes (open and close) have been changed in the numeric one.</p>";
+$close = strpos($contract, "int close");
+$pay = strpos($contract, "int pay");
+if($close || $pay)
+    echo "<p style='font-size:12px;'><span style='color: red; font-size: 12px;'>Note</span>: the mnemonic codes (open and close) have been replaced by the numeric ones, e.g. <i>int pay</i> becomes <i>int 1</i> (See the whole list of <a style='color:black;' target='_blank' href='https://developer.algorand.org/docs/reference/teal/opcodes/'><u>opcodes</u></a> for more details).</p>";
 
 ?>
 
