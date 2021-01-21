@@ -106,7 +106,7 @@
                             <i style="font-size: 10px;">exp ::= val &nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                                 a value
                                 <br>
-                                &emsp; | (exp ◦ exp) &nbsp;&emsp;&emsp;&emsp; ◦∈{+,−,<,≤,=,≥,>,∗,/,%,and,or}
+                                &emsp; | (exp ◦ exp) &nbsp;&emsp;&emsp;&emsp; ◦∈{+,−,<,=,>,∗,/,%,and,or}
                                     <br>
                                     &emsp; | not (exp) &emsp;&emsp;&emsp;&emsp; negation<br>
                                     &emsp; | txlen &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp; number of
@@ -179,11 +179,11 @@
 <?php 
 
 $contract = $_GET["contract"];
-echo $contract;
 $example_number = substr($contract, -3);
 if(substr($contract, -3, -1) == '&/')
     $contract = substr($contract, 0, -3);
 $contract = trim($contract);
+
 
 // $contract = str_replace(' ', '', $contract);
 
@@ -232,9 +232,12 @@ if($close || $pay)
 </div>
 -->
             <div class="tab">
-                <div class="tablinks">Teal</div>
-                    <div id="Teal" class="center">
-                        <div id="box" style="background-color: white;">
+                <div>
+                    <div class="tablinks">Teal</div>
+                    <div id="Teal" class="center" style="width: 10%;">
+                        <button onclick="copyToClipboard('#box')" style="float: right; width:100%;"><i class="fa fa-copy"></i></button>
+                    </div>
+                <div id="box" style="background-color: white;">
 
 <?php
 
@@ -250,8 +253,8 @@ echo "<div>".$message."</div>";
             <br>
             <div class="tab">
                 <div class="tablinks">SecTeal</div>
-                    <div id="SecTeal" class="center">
-                        <div id="box" style="background-color: white;">
+                    <div id="SecTeal" class="center"></div>
+                    <div id="box" style="background-color: white;">
 <?php
 if($example_number == '&/1')
     echo "(tx(0).rcv = addr ZZAF5ARA4MEC5PVDOP64JM5O5MQST63Q2KOY2FLYFLXXD3PFSNJJBYAFZM)";
