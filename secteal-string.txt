@@ -1,2 +1,3 @@
-(tx(0).type =  
+(tx(0).type
+= 
  int close)
