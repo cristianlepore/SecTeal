@@ -157,7 +157,7 @@ def roll_out(myList):
 # Char to substitute
 apostrophe = "'"
 # Read from file
-file = open("/var/www/html/SecTeal/secteal-string-java.txt", "r")
+file = open("/var/www/html/dev/secteal-string-java.txt", "r")
 myString = file.read().strip()
 
 # Check if the string is syntactically correct
