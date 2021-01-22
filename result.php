@@ -183,7 +183,7 @@ $example_number = substr($contract, -3);
 if(substr($contract, -3, -1) == '&/')
     $contract = substr($contract, 0, -3);
 $contract = trim($contract);
-
+echo $contract;
 
 // $contract = str_replace(' ', '', $contract);
 
